@@ -2,6 +2,7 @@
     "name": "arithmetic-service",
     "image": "arithmetic-service:latest",
     "imagePullPolicy": "IfNotPresent",
+    "apiVersion": "v1",
     "ports": [
         {
             "containerPort": 8082

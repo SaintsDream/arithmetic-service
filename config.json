@@ -1,0 +1,14 @@
+{
+    "name": "arithmetic-service",
+    "image": "arithmetic-service:latest",
+    "imagePullPolicy": "IfNotPresent",
+    "ports": [
+        {
+            "containerPort": 8083
+        }
+    ],
+    "command": [
+        "python",
+        "app.py"
+    ]
+}

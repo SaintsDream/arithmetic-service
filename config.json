@@ -1,15 +1,28 @@
 {
-    "name": "arithmetic-service",
-    "image": "arithmetic-service:latest",
-    "imagePullPolicy": "IfNotPresent",
+    "kind": "Pod",
     "apiVersion": "v1",
-    "ports": [
-        {
-            "containerPort": 8082
+    "metadata": {
+        "name": "arithmetic-service",
+        "labels": {
+            "app": "webapp"
         }
-    ],
-    "command": [
-        "python",
-        "app.py"
-    ]
+    },
+    "spec": {
+        "containers": [
+            {
+                "name": "arithmetic-service",
+                "image": "arithmetic-service:latest",
+                "imagePullPolicy": "IfNotPresent",
+                "ports": [
+                    {
+                        "containerPort": 8082
+                    }
+                ],
+                "command": [
+                    "python",
+                    "app.py"
+                ]
+            }
+        ]
+    }
 }
